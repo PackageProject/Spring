@@ -1,6 +1,7 @@
 package com.example.demo.api;
 
 
+import com.example.demo.entity.Menu;
 import com.example.demo.entity.Store;
 import com.example.demo.repository.MenusRepository;
 import com.example.demo.repository.StoresRepository;
@@ -67,6 +68,13 @@ public class StoresApiController {
     public void deleteStore(@PathVariable Long storesid) {
         storesRepository.deleteById(storesid);
     }
+
+    @GetMapping("/category/{categoryid}")
+    public List<Store> getMenuByCategory(@PathVariable Long categoryid) {
+        List<Store> storeList = storesRepository.findBycategoryid(categoryid);
+        return storeList;
+    }
+
 
 
 

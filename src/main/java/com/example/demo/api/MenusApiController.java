@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -56,6 +57,13 @@ public class MenusApiController {
     public void deleteMenu(@PathVariable Long menusid) {
         menusRepository.deleteById(menusid);
     }
+
+    @GetMapping("/category/{categoryid}")
+    public List<Menu> getMenuByCategory(@PathVariable Long categoryid) {
+        List<Menu> menuList = menusRepository.findBycategoryid(categoryid);
+        return menuList;
+    }
+
 
 
 

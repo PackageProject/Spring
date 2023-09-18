@@ -21,16 +21,24 @@ public class Menu {
     private Long storesid;
     private String menusname;
     private Long prices;
+    private Long categoryid;
+
+
+
+
+
+
 
     public Menu(){
         this.menusid = null;
 
     }
-    public Menu(Long menusid, Long storesid, String menusname, Long prices) {
+    public Menu(Long menusid, Long storesid, String menusname, Long prices, Long categoryid) {
         this.menusid = menusid;
         this.storesid = storesid;
         this.menusname = menusname;
         this.prices = prices;
+        this.categoryid = categoryid;
     }
 
 
@@ -70,6 +78,19 @@ public class Menu {
         this.prices = prices;
     }
 
+
+    public Long getCategoryid() {
+        return categoryid;
+    }
+
+    public void setCategoryid(Long categoryid) {
+        this.categoryid = categoryid;
+    }
+
+
+
+
+
     @Override
     public String toString() {
         return "Menu{" +
@@ -77,6 +98,7 @@ public class Menu {
                 ", storesid=" + storesid +
                 ", menusname='" + menusname + '\'' +
                 ", prices=" + prices +
+                ", categoryid=" + categoryid +
                 '}';
     }
 

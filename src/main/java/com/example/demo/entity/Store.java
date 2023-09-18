@@ -24,6 +24,7 @@ public class Store {
     private String storesphone;
     private String operationhour;
     private Long likescount;
+    private Long categoryid;
 
     @Override
     public String toString() {
@@ -36,6 +37,7 @@ public class Store {
                 ", storesphone='" + storesphone + '\'' +
                 ", operationhour='" + operationhour + '\'' +
                 ", likescount='" + likescount + '\'' +
+                ", categoryid=" + categoryid  + '\'' +
                 '}';
     }
 
@@ -103,13 +105,22 @@ public class Store {
         this.likescount = likescount;
     }
 
+    public Long getCategoryid() {
+        return categoryid;
+    }
+
+    public void setCategoryid(Long categoryid) {
+        this.categoryid = categoryid;
+    }
+
+
 
     public Store(){
         this.storesid = null;
 
     }
 
-    public Store(Long storesid, String storesname, String distance, String foodcategory, String storesaddress, String storesphone, String operationhour, Long likescount) {
+    public Store(Long storesid, String storesname, String distance, String foodcategory, String storesaddress, String storesphone, String operationhour, Long likescount, Long categoryid) {
         this.storesid = storesid;
         this.storesname = storesname;
         this.distance = distance;
@@ -118,6 +129,8 @@ public class Store {
         this.storesphone = storesphone;
         this.operationhour = operationhour;
         this.likescount = likescount;
+        this.categoryid = categoryid;
+
     }
 
 
